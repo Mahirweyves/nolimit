@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>notify</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> <%= content_for?(:title) ? yield(:title) : 'Notify' %> </title>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest"> -->
+
+    <%= favicon_link_tag asset_path('favicon.ico') %> 
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/theme/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/theme/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/theme/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="/assets/theme/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="/assets/theme/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/theme/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/theme/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/theme/style.css" type="text/css">
+
+  </head>
+
+  <body>
+ 
+       
+    <% flash.each do |type, message| %>
+    <% if type == "alert" %>
+      <div class="bg-red-500 bg-danger">
+        <div class="container px-1 py-2 mx-auto font-sans font-medium text-center text-white"><%= message %></div>
+      </div>
+    <% end %>
+    <% if type == "notice" %>
+      <div class="bg-green-500 bg bg-success">
+        <div class="container px-1 py-2 mx-auto font-sans font-medium text-center text-white"><%= message %></div>
+      </div>
+    <% end %>
+  <% end %>
+
+
+    <header>
+     
+    </header>
+
+    <%= yield %>
+   
+  
+
+    <!-- Js Plugins -->
+    <script src="/assets/theme/jquery-3.3.1.min.js"></script>
+    <script src="/assets/theme/bootstrap.min.js"></script>
+    <script src="/assets/theme/jquery.nice-select.min.js"></script>
+    <script src="/assets/theme/jquery-ui.min.js"></script>
+    <script src="/assets/theme/jquery.slicknav.js"></script>
+    <script src="/assets/theme/mixitup.min.js"></script>
+    <script src="/assets/theme/owl.carousel.min.js"></script>
+    <script src="/assets/theme/main.js"></script>
+
+  </body>
+</html>
