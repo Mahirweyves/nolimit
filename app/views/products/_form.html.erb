@@ -1,0 +1,84 @@
+ <div class="container col-sm-3 mb-5 mt-5 mr-1">
+  <div class="row has text-warning">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <div style="background-color: #000075;">
+  <%= simple_form_for(@product) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+    <% if @product.errors.any? %>
+      <div id="error_explanation", class="btn btn-sm btn-danger mt-3 mb-3">
+       <h2><%= pluralize(product.errors.count, "Error") %>
+    prevented this product from being saved:</h2>
+        <ul>
+          <% @product.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+      <div class="has text-center">
+    <h6 class="h4 font-weight-normal text-muted has text-center">Please fill all the fields with this<div class="has text-warning">*</div></h6></div>
+    
+    <div class="pl-1 pr-1">
+    <%= f.label :name %> 
+    <div class="field">
+    <%= f.text_field :name, maxlength: 100, placeholder: 'Product name', class:'form-control',required: true, autofocus: true, minlength: 100 %><br>
+    </div>  
+    
+    <%= f.label :address %>  <i class="text-white">( You can type number/name of the road , Sector, House number/name )</i>
+    <div class="field">
+    <%= f.text_field :address, maxlength: 100, placeholder: 'Fill in here ', class:'form-control',required: true, autofocus: true, autocomplete: "off", minlength: 100 %><br>
+    </div>
+
+
+    <%= f.label :company_name %>
+      <div class="field">
+        <%= f.text_field :company_name, maxlength: 100, placeholder: 'Company name', class:'form-control',required: true, autofocus: true, autocomplete: "off", minlength: 100 %><br>
+      </div> 
+     
+    
+    <%= f.label :telephone_number %>
+      <div class="field">
+        <%= f.text_field :telephone_number, maxlength: 100, placeholder: 'telephone', class:'form-control',required: true, autofocus: true, autocomplete: "off", minlength: 100 %><br>
+      </div> 
+      
+    
+    <%= f.label :description %>
+      <div class="field">
+           <%= f.text_area :description, placeholder: 'Add everything your clients needs to know!' , class:'form-control',required: true, autofocus: true,autofocus: true, input_html: { class: "textarea" }, wrapper: false, label_html: { class: "label" } %><br>
+      </div>
+
+    
+    <%= f.label :price %> <i></i>
+      <div class="field">    <%= f.text_field :price, maxlength: 100, placeholder: 'Price', class:'form-control',required: true, autofocus: true, autocomplete: "off", minlength: 100 %><br>
+      </div>
+
+
+   <!-- <#%= f.label :category %>
+       <div class="field has text-dark">
+        <#%= f.select :category_id, Category.all.map {|c| [c.category, c.id]}, required: true, autofocus: true, minlength: 100 %><br>
+      </div> -->     
+    
+      
+      <div class="field mt-5">
+          <div class="control">
+            <%= f.input :images, as: :file, hint: '  Each image uploaded must be less than 2 megabytes', input_html: { multiple: true, direct_upload: true }, label: false, wrapper: false %>
+          </div>
+      </div>
+
+    <br>
+        <div class="text-center">
+          <%= f.submit "Save Product", class: "btn btn-success mb-5" %>
+          <%= link_to "Back", products_path, class:" btn btn-primary mb-2 ml-5 mb-5" %>
+        <div class="checkbox">
+        <label>
+      <input type="checkbox" check="check" value="remember-me"> 
+      By creating new product you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>
+    </label></div>
+     </div>
+<% end %>
+    </div>
+</div></div>
+  </div>
+</div> 
