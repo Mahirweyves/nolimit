@@ -1,3 +1,16 @@
+ <div class="has text-center col-md-9 has text-white ml-auto mr-auto">
+ <%= yield (:body_class) %>
+    <% if flash[:notice] %>
+      <div class="btn btn-sm btn-success notification is-success global-notification mt-3 ">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% end %>
+
+    <% if flash[:alert] %>
+    <div class="btn btn-sm btn-danger notification is-danger global-notification">
+      <p class="alert"><%= alert %></p>
+    </div>
+    <% end %>
 <% if resource.errors.any? %>
   <div id="error_explanation">
     <h2>
@@ -12,4 +25,4 @@
       <% end %>
     </ul>
   </div>
-<% end %>
+<% end %></div>

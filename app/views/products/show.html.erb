@@ -1,9 +1,53 @@
-<p id="notice"><%= notice %></p>
+<!-- <section class="product spad"> -->
+        <!-- <div class="container">
+            <div class="row">
+                    <div class="sidebar"> -->
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+    <!-- <h2 class="lead">Category: <#%= @product.category.category %></h2>        -->
+    <!-- <div class="flex-row d-flex justify-content-center"> -->
+  <div class="pl-2 ml-2 mr-2">
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+    <h4 class="title is-1 ml-3">Product name: <%= @product.name %></h4>
+
+  
+      
+      <strong><p class="col-md-4 ml-4 text-primary">Posted <%= time_ago_in_words(@product.created_at) %> ago</p></strong>
+    <!-- <div class="col-md-12"> -->
+   <!-- <div class="ml-5"> -->
+      <div class="border mb-3 pl-2 pr-1 mr-2">
+        <strong class="border-bottom">Product description: </strong><%= sanitize markdown_to_html(@product.description) %>
+      </div>
+    <div class="card row ml-auto mr-1">
+      <span class="mb-4 pl-2 col-md-4 has text-warning"> 
+        <div class="card-content pt-1 pb-2 lead">
+        <div>Posted by: <%= @product.company_name %><a class="mt-1 mb-1 row text-right"></a>Address: <%= @product.address %><a class="mt-1 mb-1 row text-right"></a>Contacts: <%= @product.telephone_number %><a class="mt-1 row text-right"></a>Price: <%= @product.price %><a class="mt-1 row text-right"></a></div></div>
+      </span>
+    </div>
+    </div>
+  </div></div>
+
+<div class="container has text-center">
+<div class="row is-multiline pt-4 mb-5 ml-auto mr-1">
+
+<div class="border">
+                    <div class="row border-bottom pl-2">
+        <% @product.images.each do |image| %>
+          <div class="column is-one-third ">
+          <div style="width:360px; height:180px;">
+            <%= image_tag image.variant(resize: "320x160>") %>
+          </div></div>
+        <% end %>
+      </div></div>
+      <iframe class="bg-dark border ml-lg-4 mt-3 mb-2" width="480" height="320" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwPWqzUvZRkWVpkF52SD7uctfnLjDADdw&q=<%= @product.address.to_param %>" allowfullscreen></iframe>
+       <div class="row col-md-6 mt-auto">
+      <div class="pa3 mb4 pb-2 border-radius-3 mb-3">
+
+        <p class="ml-3 mt-4 f6 pb1 has text-dark">Author actions:</p>
+       
+        <div class="card col-md-9 pt-3">
+        <div class="button-group">
+          <%= link_to "Edit product: #{@product.name}", edit_product_path(@product), class: "btn btn-sm btn btn-secondary mb-2 mr-1 " %>
+          <%= link_to "Back", products_path, class: " btn btn-sm btn btn-primary mb-2 mr-1" %>
+          <%= button_to 'delete this product?', @product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn btn-danger mb-3" %>
+        </div></div>
+      </div></div>

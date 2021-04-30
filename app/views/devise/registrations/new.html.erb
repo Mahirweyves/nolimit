@@ -1,25 +1,105 @@
-<h2>Sign up</h2>
+<div class="container mb-2 pb-2 col-md-3 mr-1">
+<div class="row has text-warning">
+  
+<section class="form-auth text-align-left">
+<h4 class="has text-dark has text-center">Be cool and sign up if you dont have an account:</h4>
+<div style="background-color: #000075;">
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+  <h4 class="h4 font-weight-normal text-muted">Please Sign Up</h4>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-  </div>
+  <form class="form-signup">
+       
+   <div class="pl-1 pr-1">
+       <%= f.label :Username %>
+       <label for="name"></label>
+        <%= f.text_field :name, class: "form-control", placeholder: "Enter Username" %>
+        
+        <%= f.label :Email %>
+        <label for="email"></label>
+        <%= f.text_field :email, class: "form-control", placeholder: "Enter Email", tabindex: "2" %>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+        <%= f.label :telephone_number %>
+        <label for="telephone"></label>
+        <%= f.text_field :telephone_number, class: "form-control", placeholder: "Enter Telephone number", tabindex: "2" %>
+      
+        <%= f.label :password %>
+        <label for="password"></label>
+          <% if@minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %>
+        <%= f.password_field :password, class: "form-control", tabindex: "2", placeholder: "Password", required: true %>
+      
+      <%= f.label :password_confirmation %>
+      <label for="password_confirmation"></label>
+      <%= f.password_field :password_confirmation, class: "form-control", tabindex: "2", placeholder: "Password Confirmation", required: true %>
 
+
+    <div class="checkbox mt-3">
+    <label>
+      <%= f.check_box :terms_and_conditions %><span class="has text-white"> I accept the terms and conditions <a href="/products/terms_and_conditions" style="color:dodgerblue"></span><strong>Terms & Privacy</a></strong>
+    </label></div>
+
+      <div class="text-center"><%= f.submit "Sign up", class:"btn btn-success"%>
+
+  </form>
 <%= render "devise/shared/links" %>
+<div class="mb-3"></div></div>
+</div>
+</div>
+</div>
+<% end %>
+</div>
+</section>
+</main></div></div></div>
+
+
+
+  <!--<div class="container">
+    <h1 class="h3 mb-3 font-weight-normal">Please Sign Up</h1>
+    <p>Fill in this form to create an account.</p>
+    <hr>
+
+ resource %>
+
+<label for="First-name"></label>
+    <input type="text" placeholder="Enter First Name", autofocus: true, class: name="First-name" required>
+
+    <label for="Last-name"></label>
+    <input type="text" placeholder="Enter Last Name" name="Last-name" required>
+
+    <label for="email"></label>
+    <input type="text" placeholder="Enter Email" name="email" required><br>
+
+    <label for="psw"></label>
+     <% if@minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+     <% end %>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"></label>
+    <input type="password" placeholder="Confirm Password" name="psw-repeat" required>
+
+<div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" checked="checked" value="remember-me"> Remember me
+    </label>
+</div>
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+     <!-<button type="button" class="cancelbtn">Cancel</button>-->
+     <!-- <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+    </div>
+  </div> 
+
+
+
+</section>
+
+</main>
+<footer class="container">
+  <p>&copy; mayv 2020</p>
+</footer> -->
+

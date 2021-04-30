@@ -1,0 +1,21 @@
+<div style="padding-top: 10px;">
+<div class="card-image pl-4">
+    <figure class="image is-square">
+    	<div>
+        <div class="card"> 
+          <div style="background-color: #000075; border: 1px solid #000075;">
+      <%=link_to image_tag(product.images.first.variant(resize: "250x250!>")), product %>
+      <!-- </div> -->
+ 
+    <h4 class="pt0 title is-5 text-center"><%=link_to product.name, product, class: "text-warning"%></h4>
+    
+    <div class="media">
+      
+      <div class="media-content">
+        <strong><p style="padding-left: 20px;" class="has-text-weight-bold mb0 has text-white">Posted by: <%= product.company_name %></p></strong>
+       </div>
+      </div>
+    </div></div>
+     </div>
+    </figure>
+</div></div>

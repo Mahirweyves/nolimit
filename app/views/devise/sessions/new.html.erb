@@ -1,20 +1,37 @@
-<h2>Log in</h2>
+<div class="container mb-3 pb-3 col-md-3 mr-1">
+  <div class="row has text-warning">
+  
+<section class="form-auth text-align-left">
+  <h4 class= "has text-dark has text-center">Welcome back! We love to have you back.</h4>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div style="background-color: #000075;">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+ <%= devise_error_messages! %>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
+  <h1 class="h4 font-weight-normal text-muted">Please Log In</h1>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+   <div class="pl-1 pr-1">
+  <%= f.label :email_adress %>
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <%= f.email_field :email, autofocus: true, class: "form-control", id: "inputEmail", placeholder: "email address", autocomplete: "current-email" %><br>
+   
+   <%= f.label :password %>
+   <label for="inputPassword" class="sr-only">password</label>
+  <%= f.password_field :password, autofocus: true, class: "form-control", id: "inputPassword", placeholder: "password", autocomplete: "current-password" %><br>
+
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" value="remember-me"> Remember me
+    </label>
   </div>
+  <div class="text-center"><%= f.submit "Log In", class:"btn btn-success"%>
 <% end %>
 
-<%= render "devise/shared/links" %>
+
+<%= render "devise/shared/links" %></br>
+<div class="mb-3"></div></div>
+</section>
+</div>
+</div>
+</main>
+</div></div>
