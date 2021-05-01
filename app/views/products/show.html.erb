@@ -40,7 +40,7 @@
       </div></div>
       <iframe class="bg-dark border ml-lg-4 mt-3 mb-2" width="480" height="320" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwPWqzUvZRkWVpkF52SD7uctfnLjDADdw&q=<%= @product.address.to_param %>" allowfullscreen></iframe>
        <div class="row col-md-6 mt-auto">
-      <div class="pa3 mb4 pb-2 border-radius-3 mb-3">
+      <div class="pa3 mb4 pb-2 border-radius-3 mb-1 ml-3">
 
         <p class="ml-3 mt-4 f6 pb1 has text-dark">Author actions:</p>
        
@@ -50,4 +50,4 @@
           <%= link_to "Back", products_path, class: " btn btn-sm btn btn-primary mb-2 mr-1" %>
           <%= button_to 'delete this product?', @product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn btn-danger mb-3" %>
         </div></div>
-      </div></div>
+      </div></div></div></div>

@@ -3,8 +3,9 @@
   
 <section class="form-auth text-align-left">
   <h4 class= "has text-dark has text-center">Welcome back! We love to have you back.</h4>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  
   <div style="background-color: #000075;">
+    <div class="pt-2 pl-auto pr-auto"><%= render "devise/shared/error_messages", resource: resource %></div>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
  <%= devise_error_messages! %>
 
