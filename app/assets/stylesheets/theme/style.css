@@ -176,7 +176,7 @@ ol {
 	text-transform: uppercase;
 	display: inline-block;
 	padding: 13px 30px 12px;
-	background: #000075;
+	background: #000059;
 	border: none;
 }
 
@@ -211,7 +211,7 @@ ol {
 	top: 1px;
 	height: 20px;
 	width: 1px;
-	background: #ffd700;
+	background: red;
 	opacity: 0.1;
 	content: "";
 }
@@ -255,13 +255,14 @@ ol {
 	font-size: 14px;
 	display: inline-block;
 	color: #ffd700;
-	margin-right: 20px;
+	background: #000075;
+	padding: 10px;
 }
 
-.header__top__right__social a {
-	margin-right: 10;
+/*.header__top__right__social a {
+	padding: : 10;
 	background: #000075;
-}
+}*/
 
 .header__top__right__language {
 	position: relative;
@@ -1514,9 +1515,9 @@ ol {
 }
 
 .product__pagination a:hover,
-.blog__pagination a:hover {
-	background: #7fad39;
-	border-color: #7fad39;
+.product__pagination a:hover {
+	background: #000075;
+	border-color: #000075;
 	color: #ffffff;
 }
 
@@ -1716,9 +1717,6 @@ ol {
 	padding: 0;
 }
 
-.product__details__tab .product__details__tab__desc {
-	padding-top: 44px;
-}
 
 .product__details__tab .product__details__tab__desc h6 {
 	font-weight: 700;
@@ -3151,14 +3149,14 @@ ol {
 		padding: 10px 0 13px;
 	}
 	.humberger__menu__contact ul li {
-		font-size: 14px;
-		color: #1c1c1c;
+		font-size: 16px;
+		color: #000075;
 		position: relative;
 		line-height: 30px;
 		list-style: none;
 	}
 	.humberger__menu__contact ul li i {
-		color: #252525;
+		color: #000075;
 		margin-right: 5px;
 	}
 	.humberger__menu__cart ul {
@@ -3183,7 +3181,7 @@ ol {
 	.humberger__menu__cart ul li a span {
 		height: 13px;
 		width: 13px;
-		background: #7fad39;
+		background: #000075;
 		font-size: 10px;
 		color: #ffffff;
 		line-height: 13px;
@@ -3239,7 +3237,7 @@ ol {
 		margin: 0;
 	}
 	.humberger__menu__wrapper .slicknav_nav a {
-		color: #1c1c1c;
+		color: #000075;
 		font-size: 16px;
 		font-weight: 600;
 		margin: 0;
@@ -3248,13 +3246,13 @@ ol {
 	.humberger__menu__wrapper .slicknav_nav a:hover {
 		-webkit-border-radius: 0;
 		border-radius: 0;
-		background: transparent;
-		color: #7fad39;
+		background: #000075;
+		color: gold;
 	}
-	.humberger__menu__wrapper .slicknav_nav .slicknav_row,
+	/*.humberger__menu__wrapper .slicknav_nav .slicknav_row,
 	.humberger__menu__wrapper .slicknav_nav a {
 		padding: 8px 0;
-	}
+	}*/
 	.humberger__menu__overlay {
 		position: fixed;
 		left: 0;

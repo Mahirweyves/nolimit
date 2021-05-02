@@ -30,13 +30,18 @@
                 <li><a href="/products/new">Add product</a></li>
                 <li><a href="#">Account</a>
                     <ul class="header__menu__dropdown">
-                        <li><a href="./shop-details.html">Shop Details</a></li>
-                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                        <li><a href="./checkout.html">Check Out</a></li>
-                        <li><a href="./blog-details.html">Blog Details</a></li>
+                        <% if user_signed_in? %>
+                    <%= link_to 'Edit my account', edit_user_registration_path, class:"dropdown-item has text-primary" %>
+                    <%= link_to "Log Out", destroy_user_session_path, method: :delete, data: {confirm: "Are you sure?"}, class:"dropdown-item has text-primary" %>
+
+                    <% else %>
+                    <%= link_to "Log In", new_user_session_path, class:"dropdown-item has text-primary" %>
+                    <%= link_to "Sign Up", new_user_registration_path, class:"dropdown-item has text-primary" %>
+                    <% end %>
                     </ul>
-                </li>
-                <li><a href="./blog.html">About</a></li>
+                </li> 
+
+                <li><a href="./blog.html">About us</a></li>
                 <li><a href="/contacts/new">Contact</a></li>
             </ul>
         </nav>
