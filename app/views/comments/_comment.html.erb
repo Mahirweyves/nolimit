@@ -1,0 +1,19 @@
+<div class="col-ml-auto subtitle is-5 has text-left">
+<div class="border-bottom mb-2 pl-3">
+  <article class="media">
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong class="card col-md-auto"><%= comment.name %>:<a class="has text-white"> <%= comment.comment %></a></strong>
+
+           <small class= "has text-dark is-italic"><%= time_ago_in_words(comment.created_at)%> ago</small> 
+        </p>
+      </div>
+    </div>
+
+    <!-- <#% if has_role?(:admin) %> -->
+
+     <%= link_to 'Delete', [comment.product, comment], method: :delete, class: "button is-danger", data: { confirm: 'Are you sure?' } %>
+    <%# end %>
+  </article>
+</div></div>

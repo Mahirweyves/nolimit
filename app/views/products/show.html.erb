@@ -51,3 +51,15 @@
           <%= button_to 'delete this product?', @product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn btn-danger mb-3" %>
         </div></div>
       </div></div></div></div>
+
+        <section class="section comments">
+    <div class="container">
+        <h3 class="subtitle is-5 border-bottom has text-dark"><strong><%= @product.comments.count %></strong> Comments</h3>
+        <%= render @product.comments %>
+        <div class="comment-form">
+            <hr />
+            <h4 class="subtitle is-3 has text-dark has text-center">Leave a reply</h4>
+             <%= render 'comments/form' %>
+        </div>
+    </div>
+</section>

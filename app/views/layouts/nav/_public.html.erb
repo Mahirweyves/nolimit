@@ -16,13 +16,7 @@
                 </ul>
             </div> -->
 
-            <div class="header__top__right__auth">
-                <a href="#"><i class="fa fa-user"></i> Create account</a>
-            </div>| </br>
-
-            <div class="header__top__right__auth">
-                <a href="/sessions/new.html.erb"><i class="fa fa-user"></i> Login</a>
-            </div>
+           
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
@@ -67,7 +61,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
-                        <div class="header__top__left">
+                        <div class="header__top__left mt-2">
                             <ul>
                                 <li><i class="fa fa-envelope"></i> hello@notify.rw</li>
                                 <!--<li>+250 785 617 296</li>-->
@@ -81,24 +75,40 @@
                                 <a href="#"><i class="fa fa-twitter"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                                 <a href="#"><i class="fa fa-whatsapp"></i></a>
-                            <!-- </div>
+                            </div>
                             <div class="header__top__right__language">
-                                <img src="/assets/language.png" alt="">
-                                <div>English</div>
-                                <span></span>
+                                
+                                <div><i class="fa fa-user"></i> Account</div>
                                 <ul>
-                                    <li><a href="#">Kinya</a></li>
-                                    <li><a href="#">English</a></li>
-                                </ul> -->
+                    <div class="row">
+                    <div class="col-sm-4">
+            <nav>
+                <div class="header__top__right__language">    
+                    <div class="row">
+                    <div>
+                <nav>
+                <ul>
+                    <li>
+                    
+                    <% if user_signed_in? %>
+                    <%= link_to 'Edit my account', edit_user_registration_path, class:"dropdown-item has text-primary" %>
+                    <%= link_to "Log Out", destroy_user_session_path, method: :delete, data: {confirm: "Are you sure?"}, class:"dropdown-item has text-primary" %>
+
+                    <% else %>
+                    <%= link_to "Log In", new_user_session_path, class:"dropdown-item has text-primary" %>
+                    <%= link_to "Sign Up", new_user_registration_path, class:"dropdown-item has text-primary" %>
+                    <% end %>
+                    </ul></li></nav></div></div>
+                                </div></nav></div></div>
                             </div>
 
-                            <div class="header__top__right__auth">
-                                <a href="#"><i class="fa fa-user"></i> Create account</a>
+                           <!--  <div class="header__top__right__auth">
+                                <#%= link_to "Sign Up", new_user_registration_path, class:"dropdown-item has text-primary" %>
                             </div>/ 
 
                             <div class="header__top__right__auth">
-                                <a href="#"><i class="fa fa-user"></i> Login</a>
-                            </div>
+                             </i><#%= link_to "Log In", new_user_session_path, class:"dropdown-item has text-warning" %>
+                            </div> -->
                         </div>
                     </div>
                 </div>
