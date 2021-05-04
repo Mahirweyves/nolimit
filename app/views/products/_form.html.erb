@@ -55,10 +55,10 @@
       </div>
 
 
-   <!-- <#%= f.label :category %>
+    <%= f.label :category %>
        <div class="field has text-dark">
-        <#%= f.select :category_id, Category.all.map {|c| [c.category, c.id]}, required: true, autofocus: true, minlength: 100 %><br>
-      </div> -->     
+        <%= f.select :category_id, Category.all.map {|c| [c.category, c.id]}, required: true, autofocus: true, minlength: 100 %><br>
+      </div>     
     
       
       <div class="field mt-5">

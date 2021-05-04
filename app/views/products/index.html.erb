@@ -1,3 +1,29 @@
+<section class="hero hero-normal">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>All Categories</span> 
+                        </div>
+                        <div class="mr-md-12">
+       
+       
+        <ul class="list-group">
+
+        <% @categories.each do |category| %>
+ 
+         <li>
+          <%= link_to category.category, products_path(:cate => category.id), class: "has text-dark" %>
+         <!-- <div style="text-align : right;">
+         <span class="badge badge-primary badge-pill has text-dark"><#%= category.products.count%></span></div>
+ -->         </li>  
+        <% end %>
+        </ul>
+        </div>
+        </div></div></div> 
+        </div></section>
 
 
 <!-- Hero Section Begin -->
