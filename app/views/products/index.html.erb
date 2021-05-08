@@ -14,11 +14,11 @@
 
         <% @categories.each do |category| %>
  
-         <li>
-          <%= link_to category.category, products_path(:cate => category.id), class: "has text-dark" %>
-         <!-- <div style="text-align : right;">
-         <span class="badge badge-primary badge-pill has text-dark"><#%= category.products.count%></span></div>
- -->         </li>  
+         <li class="row">
+          <%= link_to category.category, products_path(:cate => category.id), class: "ml-2" %>
+         <div style="margin-left:auto">
+         <span class="badge badge-success badge-pill mr-3"><%= category.products.count%></span></div>
+         </li>  
         <% end %>
         </ul>
         </div>

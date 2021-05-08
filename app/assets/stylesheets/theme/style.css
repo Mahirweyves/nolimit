@@ -143,6 +143,11 @@ ol {
 	padding-bottom: 100px;
 }
 
+.badge {
+	color: gold;
+	background: #000075;
+}
+
 .text-white h1,
 .text-white h2,
 .text-white h3,
@@ -526,7 +531,8 @@ ol {
 
 .hero__categories ul li a {
 	font-size: 14px;
-	color: #1c1c1c;
+	font-weight: 600;
+	color: black;
 	line-height: 25px;
 	display: block;
 }
@@ -2989,7 +2995,7 @@ ol {
 		-webkit-border-radius: 0;
 		border-radius: 0;
 		background: transparent;
-		color: #7fad39;
+		color: #000075;
 	}
 	.humberger__menu__wrapper .slicknav_nav .slicknav_row,
 	.humberger__menu__wrapper .slicknav_nav a {

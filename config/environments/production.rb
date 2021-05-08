@@ -69,7 +69,7 @@ Rails.application.configure do
     
      address:       'smtp.gmail.com',
      port:          '587',
-     domain:        'www.nolimit.rw',
+     domain:        'www.notify.rw',
      user_name:     'yvesmahirwe1@gmail.com',
      password:      'yves1998',
      authentication: :plain,
