@@ -4,7 +4,7 @@
     <div class="media-content">
       <div class="content">
         <p>
-          <strong class="card col-md-auto"><%= comment.name %>:<a class="has text-white"> <%= comment.comment %></a></strong>
+          <div class="card col-md-auto"><%= comment.name %>:<a class="has text-white"> <%= comment.comment %></a></div>
 
            <small class= "has text-dark is-italic"><%= time_ago_in_words(comment.created_at)%> ago</small> 
         </p>
@@ -13,7 +13,7 @@
 
     <!-- <#% if has_role?(:admin) %> -->
 
-     <%= link_to 'Delete', [comment.product, comment], method: :delete, class: "button is-danger", data: { confirm: 'Are you sure?' } %>
+     <!-- <#%= link_to 'Delete', [comment.product, comment], method: :delete, class: "button is-danger", data: { confirm: 'Are you sure?' } %> -->
     <%# end %>
   </article>
 </div></div>
