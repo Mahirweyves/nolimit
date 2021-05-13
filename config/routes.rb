@@ -15,8 +15,6 @@ Rails.application.routes.draw do
 
   end
 
-  get '/search' => 'products#search', :as => 'search_product' 
-
   
   devise_for :users
    get "users/products/terms_and_conditions", :to => "products#terms_and_conditions"

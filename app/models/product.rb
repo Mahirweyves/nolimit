@@ -12,10 +12,10 @@ class Product < ApplicationRecord
   
   validates :name, uniqueness: { case_sensitive: false }
     
-    # def self.search_by(search_term)
-    # 	where("LOWER(name) LIKE :search_term OR LOWER(product_name) LIKE :search_term", search_term: "%#{search_term.downcase}")
-    # end
-
+    def self.search_by(search_term)
+      where("LOWER(name) LIKE :search_term OR LOWER(company_name) LIKE :search_term", search_term: "%#{search_term.downcase}%")
+    end
     extend FriendlyId
     friendly_id :name, use: :slugged
+
 end
