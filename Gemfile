@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
- gem 'rails_autolink'
+gem 'rails_autolink'
 # Use ActiveStorage variant
 gem 'mini_magick'
 
@@ -43,8 +43,10 @@ gem 'will_paginate-bootstrap4'
 gem 'mail_form'
 gem 'social-share-button'
 gem 'seed_dump'
-gem "aws-sdk-s3", require: false
 gem 'friendly_id'
+
+# gem "aws-sdk-s3", require: false
+gem 'aws-sdk-s3', '~>1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
