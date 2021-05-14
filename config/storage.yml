@@ -8,7 +8,7 @@ local:
 
 amazon:
   service: S3
-  access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
-  secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
-  bucket: <%= ENV['AWS_BUCKET_NAME'] %>
+  access_key_id: AKIA6CPZHDOV4MWPJNXU
+  secret_access_key: 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
+  bucket: notify-rw
   region: us-east-1
