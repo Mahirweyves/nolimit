@@ -346,7 +346,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  aws-sdk-s3 (~> 1)
+  aws-sdk-s3
   bootsnap (>= 1.4.2)
   bootstrap-sass
   bulma-rails
