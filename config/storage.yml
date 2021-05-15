@@ -6,9 +6,9 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
-amazon:
-  service: S3
-  access_key_id: AKIA6CPZHDOV4MWPJNXU
-  secret_access_key: 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
-  bucket: notify-rw
-  region: us-east-1
+# amazon:
+#   service: S3
+#   access_key_id: AKIA6CPZHDOV4MWPJNXU
+#   secret_access_key: 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
+#   bucket: notify-rw
+#   region: us-east-1
