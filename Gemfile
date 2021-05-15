@@ -45,8 +45,8 @@ gem 'social-share-button'
 gem 'seed_dump'
 gem 'friendly_id'
 
-gem "aws-sdk-s3", require: false
-# gem 'aws-sdk-s3', '~>1'
+# gem "aws-sdk-s3", require: false
+gem 'aws-sdk-s3', '~>1' 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
