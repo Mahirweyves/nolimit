@@ -1,0 +1,11 @@
+<% if @products.any? %>
+
+   <h3 class="ml-5 mb-1">Search Results</h3><hr />
+   <%= render @products %>
+
+<% else %>
+
+  <p><h3 class="ml-5 mb-1">Search Results</h3><hr /> <a   class="has-text-center text-white mt-4 btn bg-danger ml-5"  >Sorry!!! Nothing matches your search</a></p>
+  <p class="ml-5">Check if all words are spelled correctly</p>
+  <p class="ml-5 mb-5">Or search again by category</p>
+  <% end %>

@@ -3,4 +3,6 @@ class Category < ApplicationRecord
 	
     extend FriendlyId
     friendly_id :category, use: :slugged
+
+    resourcify
 end

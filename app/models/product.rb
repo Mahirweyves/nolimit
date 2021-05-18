@@ -11,6 +11,8 @@ class Product < ApplicationRecord
         :company_name, :telephone_number, :price, presence: true
   
   validates :name, uniqueness: { case_sensitive: false }
+  
+  resourcify
     
     def self.search_by(search_term)
       where("LOWER(name) LIKE :search_term OR LOWER(company_name) LIKE :search_term", search_term: "%#{search_term.downcase}%")

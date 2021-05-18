@@ -12,7 +12,7 @@
    <div class="ml-5 pt-4">              
   <div class="field mb-4">
     <%= f.label :Username %><br/>
-    <%= f.email_field :name, size:35, autofocus: true, autocomplete: "name" %>
+    <%= f.text_field :name, size:35, autofocus: true, autocomplete: "name" %>
   </div>
 
   <div class="field mb-4">
@@ -20,16 +20,18 @@
     <%= f.email_field :email, size:35, autofocus: true, autocomplete: "email" %>
   </div>
 
+   <div class="field mb-4">
+    <%= f.label :telephone_number %><br />
+    <%= f.text_field :telephone_number, size:35, autofocus: true, autocomplete: "telephone" %>
+  </div>
+
+
           <div class="field">
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
             <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
           <% end %>
            </div>
-  <div class="field mb-4">
-    <%= f.label :telephone_number %><br />
-    <%= f.email_field :telephone_number, size:35, autofocus: true, autocomplete: "telephone" %>
-  </div>
-
+ 
   <div class="field mb-4">
     <%= f.label :password %> <i class="text-danger">(leave it a blank if you don't want to change password)</i><br />
     <%= f.password_field :password, size:35, autocomplete: "new-password" %>

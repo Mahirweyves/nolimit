@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
 
 
   # GET /products or /products.json
-   def index
+  def index
       
 
     @categories = Category.all    
@@ -16,11 +16,18 @@ class ProductsController < ApplicationController
      else
       @products = Product.paginate(:page => params[:page], per_page: 6).order('created_at desc')
     end
-    if params[:search]
-      @search_term = params[:search]
-      @products= @products.search_by(@search_term)
-    end
   end
+
+    def search
+      if params[:search].blank?  
+        redirect_to(root_path, alert: "Empty field! You have searched nothing") and return  
+      else  
+        params[:search]
+        @search_term = params[:search]
+        @products= @products.search_by(@search_term)
+      end
+    end
+  
 
   # GET /products/1 or /products/1.json
   def show
