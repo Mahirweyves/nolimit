@@ -8,7 +8,7 @@ local:
 
 amazon:
   service: S3
-  access_key_id: AKIA6CPZHDOVTAXNXKFF
-  secret_access_key: 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
-  bucket: notiify
+  access_key_id: AKIAV5MSLEYHX4LIDZP2
+  secret_access_key: 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
+  bucket: notiify-rw
   region: us-east-1
