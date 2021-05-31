@@ -11,8 +11,8 @@ Rails.application.routes.draw do
    get "products/privacy_policy", :to => "products#privacy_policy"
   resources :products do
     resources :comments
+    resources :reviews
     
-
   end
 
   

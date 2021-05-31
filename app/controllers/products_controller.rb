@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
  before_action :set_product, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show, :terms_and_conditions, :privacy_policy]
+ before_action :authenticate_user!, except: [:index, :show, :terms_and_conditions, :privacy_policy]
 
 
   # GET /products or /products.json

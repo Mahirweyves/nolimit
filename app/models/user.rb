@@ -5,7 +5,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
-  has_many :products 
+  has_many :products
+  has_many :reviews
   # Setup accessible (or protected) attributes for your model
   
   

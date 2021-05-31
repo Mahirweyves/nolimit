@@ -4,3 +4,5 @@
 
 <%= link_to 'Show', @category %> |
 <%= link_to 'Back', categories_path %>
+<%= button_to 'delete this product?', @category, method: :delete, data: { confirm: 'Are you sure?' } %>
+

@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Categories</h1>
+<h3 class="ml-3">Categories</h3>
+
+<% if has_role?(:admin) %>
 
 <table>
   <thead>
@@ -16,7 +18,6 @@
         <td><%= category.category %></td>
         <td><%= link_to 'Show', category %></td>
         <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -25,3 +26,8 @@
 <br>
 
 <%= link_to 'New Category', new_category_path %>
+
+<% else %>
+<p class="has text-center text-white ml-3 btn bg-danger"> Sorry! You don't have right to access this page. </p><br>
+<%= link_to 'Back', products_path,class:" btn btn-primary ml-3 mb-5" %>
+<% end %>
