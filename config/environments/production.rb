@@ -69,13 +69,13 @@ Rails.application.configure do
     
      address:       'smtp.gmail.com',
      port:          '587',
-     domain:        'www.notify.rw',
+     domain:        'notify-rw.herokuapp.com',
      user_name:     'yvesmahirwe1@gmail.com',
      password:      'yves1998',
      authentication: :plain,
      enable_starttls_auto: true 
  }
-  config.action_mailer.default_url_options = { :host => 'https://notify-rw.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'notify-rw.herokuapp.com' }
   
   config.action_mailer.perform_caching = false
   # Ignore bad email addresses and do not raise email delivery errors.
