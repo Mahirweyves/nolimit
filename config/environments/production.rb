@@ -75,7 +75,7 @@ Rails.application.configure do
      authentication: :plain,
      enable_starttls_auto: true 
  }
-  config.action_mailer.default_url_options = { :host => 'https://notiify.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'https://notify-rw.herokuapp.com' }
   
   config.action_mailer.perform_caching = false
   # Ignore bad email addresses and do not raise email delivery errors.
