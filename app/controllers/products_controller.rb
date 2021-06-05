@@ -16,18 +16,12 @@ class ProductsController < ApplicationController
      else
       @products = Product.paginate(:page => params[:page], per_page: 6).order('created_at desc')
     end
-  end
-
-    def search
-      if params[:search].blank?  
-        redirect_to(root_path, alert: "Empty field! You have searched nothing") and return  
-      else  
-        params[:search]
+  
+    if params[:search]
         @search_term = params[:search]
         @products= @products.search_by(@search_term)
-      end
     end
-  
+  end
 
   # GET /products/1 or /products/1.json
   def show
@@ -57,6 +51,7 @@ class ProductsController < ApplicationController
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @product.errors, status: :unprocessable_entity }
+        format.js   { render :nothing => true }
       end
     end
   end

@@ -6,7 +6,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   has_many :products
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
   # Setup accessible (or protected) attributes for your model
   
   

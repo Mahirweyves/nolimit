@@ -23,7 +23,23 @@
         </ul>
         </div>
         </div></div></div> 
-        </div></section>
+        </div></section> 
+
+    <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb__text">
+                        <h2>Notify.rw</h2>
+                        <div class="breadcrumb__option">
+                            <a href="/">Home</a>
+                            <span>Shop</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <%= yield (:body_class) %>
 
@@ -40,7 +56,7 @@
           <!-- <div class="flex-row d-flex justify-content-center"> -->
         <div class="pl-4 mr-2">
 
-        <h4 class="title is-1 ml-4">Product name: <%= @product.name %></h4>
+        <h5 class="title is-1 ml-4">Product name: <%= @product.name %></h5>
 
         <strong><p class="col-md-4 ml-3 text-primary">Posted <%= time_ago_in_words(@product.created_at) %> ago</p></strong>
           <!-- <div class="col-md-12"> -->
@@ -52,13 +68,13 @@
       </div>
   </div>
 
-  <div class="ml-3 mr-1 col-md-3">
+  <div class="ml-3 mr-1 col-md-4">
 
       <div class="card row ml-auto mr-1">
         <h5 class="has text-white border-bottom"> Additional details: </h5>
         <span class="ml-5 mb-2 has text-warning"> 
           <div class="card-content pt-1 pb-2 lead">
-          <div>Posted by: <%= @product.company_name %><a class="mt-1 mb-1 row text-right"></a>Address: <%= @product.address %><a class="mt-1 mb-1 row text-right"></a>Contacts: <%= @product.telephone_number %><a class="mt-1 row text-right"></a>Price: <%= @product.price %><a class="mt-1 row text-right"></a></div></div>
+          <div>Posted by: <%= @product.company_name %><a class="mt-1 mb-1 row text-right"></a>Address: <%= @product.address %><a class="mt-1 mb-1 row text-right"></a>Contacts: <%= @product.telephone_number %><a class="mt-1 row text-right"></a>Price: <%= @product.price %><a class="mt-1 row text-right"></a></a>Website link: <%= auto_link(@product.link) %></div></div>
         </span>
       </div>
   </div>
@@ -100,15 +116,15 @@
               <% end %>
 
     
-     <!--  <div class="container">
+      <div class="container">
         <div class="col-md-3 ml-3">
           <h3 class="">Reviews:</h3> 
-          <#%= render @product.reviews %></br>
+          <%= render @product.reviews %></br>
           <div class="btn btn underline">
-            <#%= link_to "Add Review", new_product_review_path(@product), class:'card has text-warning has text-center mb-5' %>
+            <%= link_to "Add Review", new_product_review_path(@product), class:'card has text-warning has text-center mb-5' %>
           </div>
         </div>
-      </div> -->
+      </div>
       
 
       <script>
