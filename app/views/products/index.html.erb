@@ -45,6 +45,9 @@
 <!-- Hero Section Ends -->    
 
 <!-- Categories Section Begin -->
+    <div class="container"><%= paginate @products %></div>
+    <%= link_to_prev_page @products, 'Previous Page' %>
+<%= link_to_next_page @products, 'Next Page' %>
     <section class="categories">
         <div class="row">
                 <div class="col-lg-12">
@@ -112,7 +115,7 @@
   </div>
   <% end %>
   </div></div></div>
-                
+   <%= paginate @products %>             
     </section>
     
 </body>

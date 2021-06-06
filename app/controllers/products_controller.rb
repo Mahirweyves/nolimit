@@ -5,8 +5,6 @@ class ProductsController < ApplicationController
 
   # GET /products or /products.json
   def index
-      
-
     @categories = Category.all    
 
     cate = params[:cate]
@@ -14,7 +12,7 @@ class ProductsController < ApplicationController
     if cate.present?
       @products = Product.where(:category_id => cate).paginate(:page => params[:page], per_page: 2).order('created_at desc')
      else
-      @products = Product.paginate(:page => params[:page], per_page: 6).order('created_at desc')
+      @products = Kaminari.paginate_array(Product.first(10)).page(params[:page]).per(2)
     end
   
     if params[:search]
