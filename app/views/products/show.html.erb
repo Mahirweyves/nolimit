@@ -33,7 +33,7 @@
                         <h2>Notify.rw</h2>
                         <div class="breadcrumb__option">
                             <a href="/">Home</a>
-                            <span>Shop</span>
+                            <span>Adverts</span>
                         </div>
                     </div>
                 </div>
@@ -49,10 +49,12 @@
             <div class="row">
                     <div class="sidebar"> -->
 
-<div class="row pt-4 pb-5">
+<div class="row pt-4 pb-3">
+  <div class="container">
+<div class="row is-multiline pt-4 mr-1">
   <div class="col-md-5">
-      <div class="pl-4">
-        <h4 class="lead ml-4">Category: <%= @product.category.category %></h4>       
+      <div class="">
+        <h4 class="lead ml-3">Category: <%= @product.category.category %></h4>       
           <!-- <div class="flex-row d-flex justify-content-center"> -->
         <div class="pl-4 mr-2">
 
@@ -61,14 +63,14 @@
         <strong><p class="col-md-4 ml-3 text-primary">Posted <%= time_ago_in_words(@product.created_at) %> ago</p></strong>
           <!-- <div class="col-md-12"> -->
          <!-- <div class="ml-5"> -->
-        <div class="border mb-3 pl-2 pr-1 mr-2">
+        <div class="border mb-3 pl-2">
         <strong class="border-bottom">Product description: </strong><%= sanitize markdown_to_html(@product.description) %>
         </div>
         </div>
       </div>
   </div>
 
-  <div class="ml-3 mr-1 col-md-4">
+  <div class="ml-4 mr-1 col-md-5">
 
       <div class="card row ml-auto mr-1">
         <h5 class="has text-white border-bottom"> Additional details: </h5>
@@ -79,10 +81,10 @@
       </div>
   </div>
 </div>
-
+</div></div>
 
 <div class="container has text-center">
-<div class="row is-multiline pt-4 mb-5 ml-1 mr-1">
+<div class="row is-multiline pt-4 mb-5 ml-1 mr-3">
 
 <div class="border ml-2">
         <div class="row pl-5 pt-1 pb-3 pr-3">
@@ -96,8 +98,8 @@
             <%= image_tag image.variant(resize: "320x160>") %>
           </div></div>
         <% end %>
-      </div></div>
-      <iframe class="bg-dark border ml-lg-4 mt-3 mt-5" width="480" height="320" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwPWqzUvZRkWVpkF52SD7uctfnLjDADdw&q=<%= @product.address.to_param %>" allowfullscreen></iframe>
+</div></div>
+      <iframe class="ml-lg-4 ml-2 mt-5" width="480" height="320" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDwPWqzUvZRkWVpkF52SD7uctfnLjDADdw&q=<%= @product.address.to_param %>" allowfullscreen></iframe>
 
 
       <% if product_author(@product) || has_role?(:admin) %>
